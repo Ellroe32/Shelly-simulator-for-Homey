@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "axios": "^1.7.9",
+    "homey-api": "^1.10.21"
+  }
+}

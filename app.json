@@ -1,0 +1,92 @@
+{
+  "id": "com.roedi.shellypro3em.simulator",
+  "version": "2.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "author": {
+    "name": "Ellroe32",
+    "email": "hoog_labradors.2d@icloud.com"
+  },
+  "name": {
+    "en": "Shelly Pro 3EM Emulator",
+    "nl": "Shelly Pro 3EM Emulator"
+  },
+  "description": {
+    "en": "Simulates a Shelly Pro 3EM energy meter for use with the Marstek Venus system.",
+    "nl": "Simuleert een Shelly Pro 3EM energiemeter voor gebruik met het Marstek Venus systeem."
+  },
+  "category": "energy",
+  "brandColor": "#FF6600",
+  "permissions": [],
+  "images": {
+    "small": "assets/images/app_small.png",
+    "large": "assets/images/app_large.png"
+  },
+  "assets": {
+    "icon": "assets/icon.svg"
+  },
+  "drivers": [
+    {
+      "id": "shellypro3em",
+      "name": {
+        "en": "Shelly Pro 3EM Emulator",
+        "nl": "Shelly Pro 3EM Emulator"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_power",
+        "measure_power.l1",
+        "measure_power.l2",
+        "measure_power.l3"
+      ],
+      "settings": [
+        {
+          "id": "homeWizardIP",
+          "type": "text",
+          "label": {
+            "en": "HomeWizard IP",
+            "nl": "HomeWizard IP"
+          },
+          "hint": {
+            "en": "Enter the IP address of your HomeWizard P1.",
+            "nl": "Voer het IP-adres van je HomeWizard P1 in."
+          },
+          "placeholder": "192.168.178.29"
+        },
+        {
+          "id": "marstekIP",
+          "type": "text",
+          "label": {
+            "en": "Marstek IP",
+            "nl": "Marstek IP"
+          },
+          "hint": {
+            "en": "Enter the IP address of your Marstek Venus device.",
+            "nl": "Voer het IP-adres van je Marstek Venus thuisbatterij in."
+          },
+          "placeholder": "192.168.178.187"
+        }
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": true
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "images": {
+        "small": "assets/images/shellypro3em_small.png",
+        "large": "assets/images/shellypro3em_large.png"
+      }
+    }
+  ]
+}
